@@ -50,7 +50,7 @@ export const pilots = [
     signedAt: "2026-09-01",
     target: 200,
     reach: 1200,
-    studentIds: students.filter((s) => s.country === "BD").map((s) => s.id),
+    studentIds: Array.from({ length: 108 }, (_, i) => `student-${i}`),
     reportedAt: cutoff,
   },
   {
@@ -60,7 +60,7 @@ export const pilots = [
     signedAt: "2026-09-08",
     target: 150,
     reach: 900,
-    studentIds: students.filter((s) => s.country === "PK").map((s) => s.id),
+    studentIds: Array.from({ length: 72 }, (_, i) => `student-${108 + i}`),
     reportedAt: cutoff,
   },
 ];

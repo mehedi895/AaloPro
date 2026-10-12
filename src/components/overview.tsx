@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import Sidebar from "./sidebar";
 import {
   countries,
   cutoff,
@@ -50,38 +50,7 @@ export default function Overview() {
   }
   return (
     <div className="shell">
-      <aside className="sidebar">
-        <Link href="/" className="brand" aria-label="AaloPro overview">
-          Aalo<span>Pro</span>
-          <i />
-        </Link>
-        <div className="workspace">
-          FOUNDING TEAM <span>INTERNAL</span>
-        </div>
-        <nav aria-label="Main navigation">
-          <Link href="/" className="selected">
-            <b>◫</b> Overview
-          </Link>
-          {[
-            ["◇", "Pilots and partners"],
-            ["▥", "Usage"],
-            ["▤", "Subscription records"],
-          ].map(([icon, name]) => (
-            <div className="nav-future" key={name}>
-              <b>{icon}</b>
-              <span>
-                {name}
-                <small>Coming later</small>
-              </span>
-            </div>
-          ))}
-        </nav>
-        <div className="sidebar-bottom">
-          <span className="dot" /> Local demo workspace
-          <p>Bangladesh & Pakistan pilots</p>
-          <small>Synthetic records only</small>
-        </div>
-      </aside>
+      <Sidebar active="overview" />
       <div className="main">
         <header className="topbar">
           <span>

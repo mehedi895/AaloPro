@@ -2,8 +2,9 @@
 
 - This is a private founding-team dashboard for Bangladesh and Pakistan pilots, not the student app or a public investor site.
 - Preserve existing work and inspect the stack before changing it. Explain any proposed stack replacement.
-- Implement only Overview for the first milestone. Obtain approval of the implementation plan before scaffolding or implementing the dashboard.
-- Future sections: Overview, Pilots and partners, Usage, Subscription records.
+- Approved milestones: Overview and the read-only Pilots and partners section. Obtain approval of a plan before implementing further sections.
+- Implemented sections: Overview and Pilots and partners. Future sections: Usage and Subscription records.
+- Preserve Overview figures and definitions. Keep partner organizations separate from pilots; prospects never count as signed partners. Attribute pilot usage through explicit synthetic IDs.
 - Use synthetic sample data only and show a prominent “Demo data” label. Never imply verified AaloPro traction.
 - Keep actual usage, pilot targets, and partner network reach distinct. Keep paying parents distinct from paid student subscriptions.
 - Do not connect to production, upload real student data, or store student names, phone numbers, voice recordings, or tutoring conversations.

@@ -678,3 +678,163 @@ footer {
     display: none;
   }
 }
+
+/* Read-only partner directory */
+.partner-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.partner-list {
+  display: grid;
+  gap: 14px;
+}
+.partner-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.partner-card > summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+}
+.partner-card > summary::-webkit-details-marker {
+  display: none;
+}
+.partner-heading {
+  display: grid;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.partner-heading strong {
+  font-size: 15px;
+}
+.partner-heading small {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.stage-badge {
+  font-size: 10px;
+  padding: 7px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.prospect {
+  background: #f7f1d8;
+  color: #74601b;
+}
+.detail-hint {
+  font-size: 10px;
+  color: var(--muted);
+}
+.partner-card[open] .detail-hint {
+  color: var(--ink);
+}
+.partner-content {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+.partner-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.partner-context h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+}
+.partner-note {
+  margin: 16px 0 22px;
+}
+.pilot-detail {
+  margin-top: 15px;
+  background: #fcfdf9;
+}
+.pilot-detail .pilot-top h3 {
+  margin: 0;
+}
+.pilot-detail > p {
+  margin: 10px 0 15px;
+}
+.pilot-detail .subtle-badge {
+  text-transform: capitalize;
+}
+.milestones h3 {
+  margin: 20px 0 10px;
+  font-size: 12px;
+}
+.milestones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.milestones li {
+  display: flex;
+  gap: 18px;
+  padding: 10px 0;
+  font-size: 11px;
+  border-top: 1px solid var(--border);
+}
+.milestones time {
+  min-width: 85px;
+  color: var(--muted);
+}
+.milestones small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.empty-reset {
+  display: block;
+  border: 1px solid #c7bf9d;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-top: 12px;
+  background: #fff;
+}
+@media (max-width: 800px) {
+  .partner-card > summary {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+  .partner-heading {
+    flex-basis: 100%;
+  }
+  .detail-hint {
+    margin-left: auto;
+  }
+  .partner-content {
+    padding: 16px;
+  }
+  .partner-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 420px) {
+  .partner-context {
+    grid-template-columns: 1fr;
+  }
+  .partner-card .pilot-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .partner-card .pilot-stats > div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .partner-card .pilot-stats strong {
+    min-width: 50px;
+  }
+  .partner-card .pilot-report {
+    flex-wrap: wrap;
+    line-height: 1.7;
+  }
+  .milestones li {
+    gap: 10px;
+  }
+}
